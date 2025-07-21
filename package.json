@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@react-native-community/cli": "^18.0.0"
+  },
+  "dependencies": {
+    "formik": "^2.4.6",
+    "react-native-bouncy-checkbox": "^4.1.2"
+  }
+}
