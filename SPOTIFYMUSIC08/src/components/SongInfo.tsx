@@ -1,16 +1,24 @@
 import React, { PropsWithChildren } from 'react'
-import { StyleSheet,View } from 'react-native';
+import { StyleSheet,Text,View } from 'react-native';
 import { Track } from 'react-native-track-player';
 
 type SongInfoProps = PropsWithChildren<{
     track:Track|null|undefined
 }>
 
-const SongInfo=()=> {
+const SongInfo=({track}:SongInfoProps)=> {//we destructure the track and the track is type of SongInfoProps
   return (
-    <div>
-      
-    </div>
+    <View style={styles.container}>
+        <View>
+            <Text style = {styles.name}>
+                {track?.title} //if track is present we take the title from the track
+            </Text>
+             <Text style = {styles.artist}>
+            {track?.artist} . {track?.album} // if the track is present we take the artist name from the track
+
+            </Text>
+        </View>
+    </View>
   )
 }
 const styles = StyleSheet.create({

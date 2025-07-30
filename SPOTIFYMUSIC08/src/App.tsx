@@ -5,6 +5,7 @@ import { NewAppScreen } from '@react-native/new-app-screen';
 import { ActivityIndicator, StatusBar, StyleSheet, useColorScheme, View,SafeAreaView } from 'react-native';
 //we bring setUpPlayer  and addTrack from musicPlayerServices
 import { addTrack,setupPlayer } from "../musicPlayerServices";
+import MusicPlayer from "./screens/MusicPlayer";
 
 
 
@@ -35,7 +36,10 @@ if (!isPlayerReady){
   )
 }
   return (
-   <></>
+  <View style={styles.container}>
+    <StatusBar  barStyle={"light-content"}/>
+    <MusicPlayer/>
+  </View>
   );
 }
 
